@@ -1,0 +1,2 @@
+reset
+./svm_latent_classify /home/ssabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/c3_va/groundtruth_file_scale_100.txt model.txt results.txt

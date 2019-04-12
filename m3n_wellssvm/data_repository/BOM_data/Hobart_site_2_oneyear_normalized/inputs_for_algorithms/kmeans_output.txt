@@ -1,0 +1,39 @@
+***************
+kmeans_init_1.txt
+****************
+tot-tokens = 396 tot-pos-tokens = 151 tot-neg-tokens = 245
+tp=96,tn=148,fp=97,fn=55
+KMeans Accuracy = 61.616162
+precision = 0.497409 , recall = 0.635762 , f1_score = 0.558140
+
+***************
+kmeans_init_2.txt
+****************
+tot-tokens = 396 tot-pos-tokens = 151 tot-neg-tokens = 245
+tp=100,tn=145,fp=100,fn=51
+KMeans Accuracy = 61.868687
+precision = 0.500000 , recall = 0.662252 , f1_score = 0.569801 
+
+***************
+kmeans_init_3.txt
+****************
+tot-tokens = 396 tot-pos-tokens = 151 tot-neg-tokens = 245
+tp=96,tn=149,fp=96,fn=55
+KMeans Accuracy = 61.868687
+precision = 0.500000 , recall = 0.635762 , f1_score = 0.559767 
+
+***************
+kmeans_init_4.txt
+****************
+tot-tokens = 396 tot-pos-tokens = 151 tot-neg-tokens = 245
+tp=102,tn=145,fp=100,fn=49
+KMeans Accuracy = 62.373737
+precision = 0.504950 , recall = 0.675497 , f1_score = 0.577904
+
+***************
+kmeans_init_5.txt
+****************
+(RESULT INVERTED)tot-tokens = 396 tot-pos-tokens = 151 tot-neg-tokens = 245
+(RESULT INVERTED)tp=98,tn=146,fp=99,fn=53
+(RESULT INVERTED)KMeans Accuracy = 61.616162
+(RESULT INVERTED)precision = 0.497462 , recall = 0.649007 , f1_score=0.563218 

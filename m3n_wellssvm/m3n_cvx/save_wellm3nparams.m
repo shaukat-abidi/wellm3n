@@ -1,0 +1,1 @@
+save('/home/sabidi/Shaukat/m3n_wellssvm/models_saved/a1/mosek_noQP/kmeans_init_2/c0.01/m3n_wellssvm.mat','L','mu','w_struct')

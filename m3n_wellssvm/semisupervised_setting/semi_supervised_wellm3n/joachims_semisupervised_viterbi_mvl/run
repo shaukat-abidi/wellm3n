@@ -1,0 +1,10 @@
+reset
+make clean
+make
+reset
+
+groundtruth_dir='/home/ssabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/c3_va'
+gt_filename='/groundtruth_file_scale_100.txt'
+supervision_filename='/sup_labels_97_per.txt'
+
+./main_file $groundtruth_dir$gt_filename $groundtruth_dir$supervision_filename

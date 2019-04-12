@@ -1,0 +1,4 @@
+reset
+gt='/home/sabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/c3_va/m3n/full/groundtruth_file_scale_100.txt'
+model='/home/sabidi/Shaukat/WellSSVM/experiments/latentssvm_HCRF/models_saved/model_a1_kmeans_init_2_C0.01.txt'
+./svm_latent_classify $gt $model results.txt

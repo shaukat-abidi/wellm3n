@@ -1,0 +1,2 @@
+1- Input training files for cross-validation test.
+2- Labels are not important here, only features are read for generating emission and transition params

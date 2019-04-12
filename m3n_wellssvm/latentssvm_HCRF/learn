@@ -1,0 +1,5 @@
+rm -f model.txt
+reset
+make clean
+make
+./svm_latent_learn -e 0.1 -c 0.1 /home/sabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/a1_va/m3n/full/kmeans_init_2.txt model.txt

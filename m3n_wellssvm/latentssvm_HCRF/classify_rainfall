@@ -1,0 +1,2 @@
+reset
+./svm_latent_classify /home/sabidi/Shaukat/m3n_wellssvm/data_repository/BOM_data/Hobart_site_1_sixmonths_normalized/inputs_for_algorithms/groundtruth_file_scale_1.txt model.txt results.txt

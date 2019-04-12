@@ -1,0 +1,3 @@
+from_web: Contains BOM DATA extracted from the web
+processed: data in the "from_web" is cleaned, labels are generated for rainfall
+kmeans_EM: Groundtruth Generation, Application of K-Means and EM

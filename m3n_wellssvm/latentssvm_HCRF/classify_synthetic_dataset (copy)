@@ -1,0 +1,5 @@
+rm -f results.txt
+make clean
+make
+reset
+./svm_latent_classify /home/shaukat/Shaukat/WellSSVM/experiments/HMM_Label_generation/synthetic_dataset/groundtruth_file.txt model.txt results.txt

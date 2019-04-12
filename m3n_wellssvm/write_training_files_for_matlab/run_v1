@@ -1,0 +1,10 @@
+reset
+rm -f /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/params/*
+base_path='/home/sabidi/Shaukat/m3n_wellssvm/data_repository/BOM_data/Hobart_site_1/inputs_for_algorithms/'
+filename='kmeans_init_3.txt'
+target_filename='/home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/params/gt_0.txt'
+
+./main_file $base_path$filename $target_filename
+
+cp /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/init_files/L.txt /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/params/
+cp /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/init_files/mu.txt /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/params/

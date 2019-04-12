@@ -1,0 +1,15 @@
+rm -f model.txt
+
+reset
+make clean
+make
+reset
+
+root_dir=${PWD}
+groundtruth_dir='/home/ssabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/c3_va'
+train_filename='/kmeans_init_4.txt'
+gt_filename='/groundtruth_file_scale_100.txt'
+supervision_filename='/sup_labels_97_per.txt'
+
+
+./svm_latent_learn -e 0.1 -c 0.1 $groundtruth_dir$train_filename $root_dir/model.txt $groundtruth_dir$supervision_filename $groundtruth_dir$gt_filename

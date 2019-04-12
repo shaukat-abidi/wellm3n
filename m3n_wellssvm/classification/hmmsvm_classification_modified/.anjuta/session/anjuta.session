@@ -1,0 +1,25 @@
+
+[Anjuta]
+Maximized=1
+Geometry=1920x1150+8+30
+
+[Project Manager]
+Shortcut=C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light_clean svm_light_clean %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_clean svm_struct_clean %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/clean clean %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_noexe svm_struct_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_api.o svm_struct_api.o %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_learn_custom.o svm_struct_learn_custom.o %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light_hideo_noexe svm_light_hideo_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_hmm_learn svm_hmm_learn %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_noexe svm_struct_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_api.o svm_struct_api.o %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light_hideo_noexe svm_light_hideo_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_hmm_classify svm_hmm_classify %%%C file:///home/ehsan/Desktop/ICCV2013/hmmsvm/all all 
+
+[File Loader]
+Files=file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_api_types.h#22%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_api.c#323%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_learn_custom.c#1%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct/svm_struct_learn.c#593%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct/svm_struct_main.c#68%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct_api.h#18%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light/svm_common.h#361%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light/svm_learn_main.c#99%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_light/svm_learn.c#80%%%file:///home/ehsan/Desktop/ICCV2013/hmmsvm/svm_struct/svm_struct_classify.c#57
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Run in terminal=2
+Working directories=file:///home/ehsan/Desktop/ICCV2013/hmmsvm
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Default
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'

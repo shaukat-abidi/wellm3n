@@ -1,0 +1,5 @@
+rm model.txt
+reset
+make clean
+make
+./svm_latent_learn -e 0.1 -c 1 /home/shaukat/Shaukat/WellSSVM/experiments/HMM_Label_generation/synthetic_dataset/text_files/randomlabel_91.txt model.txt

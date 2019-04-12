@@ -1,0 +1,6 @@
+reset
+make clean
+make
+reset
+
+./main_file 

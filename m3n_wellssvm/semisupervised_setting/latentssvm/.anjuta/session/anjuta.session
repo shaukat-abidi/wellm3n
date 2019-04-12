@@ -1,0 +1,30 @@
+
+[Anjuta]
+Maximized=1
+Geometry=1920x1150+0+0
+
+[Project Manager]
+Shortcut=C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/clean clean %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_struct_latent_classify.o svm_struct_latent_classify.o %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_struct_latent_api.o svm_struct_latent_api.o %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_light_hideo_noexe svm_light_hideo_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_latent_classify svm_latent_classify %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_struct_latent_cccp.o svm_struct_latent_cccp.o %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_struct_latent_api.o svm_struct_latent_api.o %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_light_hideo_noexe svm_light_hideo_noexe %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_latent_learn svm_latent_learn %%%C file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/all all 
+
+[File Loader]
+Files=file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF_WriteLabelinOutputFile/svm_struct_latent_api.c#210
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Program arguments=Train.txt Model.txt%%%-c 0.1 Train.txt Model.txt
+Program uri=file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF/svm_latent_learn
+Run in terminal=2
+Working directories=file:///home/ehsan/Desktop/ICCV2013/latentssvm_HCRF
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Default
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'
+
+[Debugger]
+Stop at beginning=1

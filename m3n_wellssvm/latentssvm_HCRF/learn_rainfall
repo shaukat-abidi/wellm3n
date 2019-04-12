@@ -1,0 +1,7 @@
+rm -f model.txt
+reset
+make clean
+make
+base_dir='/home/sabidi/Shaukat/m3n_wellssvm/data_repository/BOM_data/Hobart_site_2_oneyear_normalized/inputs_for_algorithms/'
+./svm_latent_learn -e 0.001 -c 0.001 $base_dir'kmeans_init_5.txt' model.txt
+./svm_latent_classify $base_dir'groundtruth_file_scale_1.txt' model.txt results.txt

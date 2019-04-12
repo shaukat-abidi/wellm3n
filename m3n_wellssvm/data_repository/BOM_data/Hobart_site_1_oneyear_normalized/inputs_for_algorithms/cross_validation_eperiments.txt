@@ -1,0 +1,34 @@
+--------
+K-Means
+--------
+Save k-means parameters, for three different labelings we will have three different k-means models
+save('kmeans_s1_y1_init_1.mat', 'C'): k-means params for site-1, 1-year and first init labeling
+THEN 
+run /home/sabidi/Shaukat/m3n_wellssvm/data_repository/BOM_data/generalization_experiment/load_kmeans_params_and_run_it.m to load the model and data for cross validation experiments
+
+---------
+EM
+--------- 
+Save EM parameters, for three different labelings we will have three different EM models
+save('EM_s1_y1_init_1.mat', 'C'): EM params for site-1, 1-year and first init labeling
+THEN 
+run /home/sabidi/Shaukat/m3n_wellssvm/data_repository/BOM_data/generalization_experiment/load_em_params_and_run_it.m to load the model and data for cross validation experiments
+
+---------
+LSSVM
+--------- 
+Save lssvm model in /home/sabidi/Shaukat/m3n_wellssvm/latentssvm_HCRF/models_saved/BOM
+lssvm_s1_y1_init_1.txt: model file for site-1, 1-year and first init labeling
+THEN 
+run /home/sabidi/Shaukat/m3n_wellssvm/latentssvm_HCRF/classify_generalization_rainfall to load the model and data for cross validation experiments
+
+---------
+Well-M3N
+--------
+To save m3n_models, run /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/save_wellm3nparams_rainfallmodel.m
+Then 
+run /home/sabidi/Shaukat/m3n_wellssvm/m3n_cvx/write_m3n_model_for_rainfall.m
+Then
+run ./classify_rainfall (Change groundtruth file here)
+
+

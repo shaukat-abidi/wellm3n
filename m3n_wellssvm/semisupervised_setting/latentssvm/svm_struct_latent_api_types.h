@@ -1,0 +1,136 @@
+/************************************************************************/
+/*                                                                      */
+/*   svm_struct_latent_api_types.h                                      */
+/*                                                                      */
+/*   API type definitions for Latent SVM^struct                         */
+/*                                                                      */
+/*   Author: Ehsan Zare Borzeshi & Massimo Piccardi                     */
+/*   Date: Feb.2013                                                     */
+/*                                                                      */
+/*   This software is available for non-commercial use only. It must    */
+/*   not be modified and distributed without prior permission of the    */
+/*   author. The author is not responsible for implications from the    */
+/*   use of this software.                                              */
+/*                                                                      */
+/************************************************************************/
+
+# include "svm_light/svm_common.h"
+# include "svm_light/svm_learn.h"
+
+# define INST_NAME          "SSVM-HCRF"
+# define INST_VERSION       "V1"
+# define INST_VERSION_DATE  "02.2013"
+
+/* Default precision for solving the optimization problem */
+# define DEFAULT_EPS         0.1 
+/* Default loss rescaling method: 1=slack_rescaling, 2=margin_rescaling */
+# define DEFAULT_RESCALING   2
+/* Default loss function: */
+# define DEFAULT_LOSS_FCT    1
+/* Default optimization algorithm to use: */
+# define DEFAULT_ALG_TYPE    4
+/* Store Psi(x,y) (for ALG_TYPE 1) instead of recomputing it every time: */
+# define USE_FYCACHE         1
+/* Decide whether to evaluate sum before storing vectors in constraint
+   cache: 
+   0 = NO, 
+   1 = YES (best, if sparse vectors and long vector lists), 
+   2 = YES (best, if short vector lists),
+   3 = YES (best, if dense vectors and long vector lists) */
+# define COMPACT_CACHED_VECTORS 1
+/* Minimum absolute value below which values in sparse vectors are
+   rounded to zero. Values are stored in the FVAL type defined in svm_common.h 
+   RECOMMENDATION: assuming you use FVAL=float, use 
+     10E-15 if COMPACT_CACHED_VECTORS is 1 
+     10E-10 if COMPACT_CACHED_VECTORS is 2 or 3 
+*/
+# define COMPACT_ROUNDING_THRESH 10E-15
+
+typedef struct type_supervised_labels{
+	long tot_entries;
+	long *seq_id;
+	long *frame_id;
+}TYPE_SUPLABELS;
+
+
+typedef struct pattern {
+  /*
+    Type definition for input pattern x
+  */
+  DOC     **tokens;
+  long    length;
+} PATTERN;
+
+typedef struct label {
+  /*
+    Type definition for output label y
+  */
+  long label;   /* 1 (True) or 2(False) */	
+  long *label_vector;   /* 1 (True) or 2(False) */
+  long length;	
+  double prob;	// Probability of winning assigned class
+} LABEL;
+
+typedef struct latent_var {
+  /*
+    Type definition for latent variable h
+  */
+  long *states;  
+ } LATENT_VAR;
+
+typedef struct example {
+  PATTERN x;
+  LABEL y;
+  LATENT_VAR h;
+} EXAMPLE;
+
+typedef struct sample {
+  int n;
+  EXAMPLE *examples;
+} SAMPLE;
+
+
+typedef struct structmodel {
+  double *w;          /* Pointer to the learned weights */
+  MODEL  *svm_model;  /* The learned SVM model          */
+  long   sizePsi;     /* Maximum number of weights in w */
+                      /* Other information that is needed for the stuctural model can be
+                         added here: */
+  double walpha;  
+} STRUCTMODEL;
+
+
+typedef struct struct_learn_parm {
+  double epsilon;               /* Precision for which to solve
+				                  quadratic program */
+  long newconstretrain;         /* Number of new constraints to
+				                  accumulate before recomputing the QP solution */
+  double C;                     /* Trade-off between margin and loss */
+  char   custom_argv[20][1000]; /* string set with the -u command line option */
+  int    custom_argc;           /* Number of -u command line options */
+  int    slack_norm;            /* Norm to use in objective function
+                                   for slack variables; 1 -> L1-norm, 2 -> L2-norm */
+  int    loss_type;             /* selected loss function from -r command line option. 
+	                               Select between slack rescaling (1) and margin rescaling (2) */
+  int    loss_function;         /* select between different loss functions via -l command line option */
+  
+  /* Further parameters that are passed to init_struct_model() */
+  long   num_features;         /* Number of features in each
+				                  individual token vector */
+  long   num_classes;          /* Number of classes */
+  long   num_states;	       /* Number of states */
+  long   hmm_trans_order;      /* Order of dependencies of transitions in HMM (1 in this code) */ 
+  long   hmm_emit_order;       /* Order of dependencies of emission in HMM (0 in this code) */ 
+  
+  /*a very hacky fix*/
+  LATENT_VAR *h_init; /*h_init[0].states[0-T1]: "h" for example-1*/
+                      /*h_init[1].states[0-T2]: "h" for example-2*/
+  long lot;
+  long sample_index; 
+  
+  /* for true semi-supervised learning */
+  SAMPLE supervised_sample;
+	
+} STRUCT_LEARN_PARM;
+
+double loss_for_classification(LATENT_VAR hbar, STRUCT_LEARN_PARM *sparm);

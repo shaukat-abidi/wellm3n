@@ -1,0 +1,2 @@
+reset
+./svm_hmm_classify /home/sabidi/Shaukat/WellSSVM/experiments/HMM_Label_generation/gesture_segmentation/a1_va/m3n/full/groundtruth_file_scale_100.txt
